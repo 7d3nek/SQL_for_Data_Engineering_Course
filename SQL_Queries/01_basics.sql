@@ -9,7 +9,7 @@ job_location
 
 job_via
 
-Then, sort the results in ascending order by job_location.
+Then, sort the results in descending order by job_location.
 */
 
 SELECT
@@ -18,7 +18,7 @@ SELECT
   job_location,
   job_via
 FROM job_postings_fact
-ORDER BY job_location ASC
+ORDER BY job_location DESC
 
 
 
