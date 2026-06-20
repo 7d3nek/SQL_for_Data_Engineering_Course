@@ -49,7 +49,7 @@ job_id
 job_title_short
 job_location
 job_via
-Then, retrieve the last 10 postings based on job_id.
+Then, retrieve the last 15 postings based on job_id.
 */
 
 SELECT
@@ -59,7 +59,7 @@ SELECT
   job_via
 FROM job_postings_fact
 ORDER BY job_id DESC
-LIMIT 10
+LIMIT 15
 
 
 /*
