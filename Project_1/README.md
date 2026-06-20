@@ -40,28 +40,28 @@ By querying across these interconnected tables, I extracted insights about skill
 
 The project is structured around three sequential SQL queries, each building on the previous one's insights:
 
-[01_top_demanded_skills.sql](Project_1\01_top_demanded_skills.sql)
+[01_top_demanded_skills.sql](01_top_demanded_skills.sql)
 
-[02_top_paying_skills.sql](Project_1\02_top_paying_skills.sql)
+[02_top_paying_skills.sql](02_top_paying_skills.sql)
 
-[03_optimal_skills.sql](Project_1\03_optimal_skills.sql)
+[03_optimal_skills.sql](03_optimal_skills.sql)
 
-1. [**🚀 Most In-Demand Skills at FAANG (Remote Data Engineer Roles)**](Project_1\01_top_demanded_skills.sql)
+1. [**🚀 Most In-Demand Skills at FAANG (Remote Data Engineer Roles)**](01_top_demanded_skills.sql)
    Joins job postings to company and skills tables, filters to remote Data Engineer roles at Facebook/Meta, Apple, Amazon, Netflix, and Google, then counts skill frequency to surface the top 10 most requested skills.
 
-2. [**💵 Highest-Paying Skills for Data Engineers**](Project_1\02_top_paying_skills.sql)
+2. [**💵 Highest-Paying Skills for Data Engineers**](02_top_paying_skills.sql)
    Calculates the **median** salary (to reduce the influence of outliers) for each skill across remote, salary-specified Data Engineer postings, while also tracking how frequently each skill appears — pairing pay with demand context.
 
-3. [**⚖️ Most Optimal Skills (Demand + Salary Combined)**](Project_1\03_optimal_skills.sql)
+3. [**⚖️ Most Optimal Skills (Demand + Salary Combined)**](03_optimal_skills.sql)
    Uses window functions (`RANK()`) to rank skills independently by demand and by median salary, then averages the two ranks to produce a single composite score that identifies the best overall skills to learn.
 
 ### 🏆 Key Findings
 
-[**🚀 Top in-demand skills at FAANG (remote):**](Project_1\01_top_demanded_skills.sql) Python and SQL lead (52 postings each), followed by Java, Scala, and Spark — reflecting data engineering's roots in JVM-based big data tooling, with Python/SQL as the universal baseline.
+[**🚀 Top in-demand skills at FAANG (remote):**](01_top_demanded_skills.sql) Python and SQL lead (52 postings each), followed by Java, Scala, and Spark — reflecting data engineering's roots in JVM-based big data tooling, with Python/SQL as the universal baseline.
 
-[**💵 Top-paying skills:**](Project_1\02_top_paying_skills.sql) Terraform ($184K median) tops the list, followed by Kubernetes ($150.5K) and Airflow ($150K, 386 postings) — Airflow stands out for combining high pay with high demand. Python, despite having the highest demand overall (1,133 postings), pays closer to the median ($135K), since it's a baseline expectation rather than a differentiator.
+[**💵 Top-paying skills:**](02_top_paying_skills.sql) Terraform ($184K median) tops the list, followed by Kubernetes ($150.5K) and Airflow ($150K, 386 postings) — Airflow stands out for combining high pay with high demand. Python, despite having the highest demand overall (1,133 postings), pays closer to the median ($135K), since it's a baseline expectation rather than a differentiator.
 
-[**⚖️ Best overall skills (demand + salary combined):**](Project_1\03_optimal_skills.sql) Spark ranks #1 overall by balancing strong demand with a high median salary. Airflow and AWS tie for second, representing two distinct strategies — Airflow leans on salary, AWS leans on demand. Python and SQL round out the top tier on sheer demand volume alone.
+[**⚖️ Best overall skills (demand + salary combined):**](03_optimal_skills.sql) Spark ranks #1 overall by balancing strong demand with a high median salary. Airflow and AWS tie for second, representing two distinct strategies — Airflow leans on salary, AWS leans on demand. Python and SQL round out the top tier on sheer demand volume alone.
 
 ## 🧠 SQL Skills Demonstrated
 
