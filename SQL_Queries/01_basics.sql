@@ -7,6 +7,8 @@ job_title_short
 
 job_location
 
+job_country
+
 job_via
 
 Then, sort the results in descending order by job_location.
@@ -16,6 +18,7 @@ SELECT
   job_id,
   job_title_short,
   job_location,
+  job_country,
   job_via
 FROM job_postings_fact
 ORDER BY job_location DESC
